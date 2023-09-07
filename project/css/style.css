@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Nunito+Sans:opsz,wght@6..12,200&family=Roboto:wght@400;500;700&family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Nunito+Sans:opsz,wght@6..12,200&family=Roboto:wght@400;500;700&display=swap');
+
+.html,
+.body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    color: black;
+
+}
+.wrapper{
+    min-width: 100%;
+    overflow: hidden;
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+    overflow: hidden;    /* Скрываем часть текста, которая не помещается */
+    text-overflow: ellipsis; /* Добавляем многоточие для обрезанных текстов */
+}
+
+._container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+/*-------------Шапка-------------------------------------------------------------------*/
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+}
+.header__container{
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+}
+.header__menu{
+
+}
+.menu__list{
+  display: flex;
+}
+.menu{
+  margin: 5px 320px 0px 0px;
+}
+.menu__iteam{
+  margin: 0px 0px 0px 32px;
+  max-width: 150px;
+}
+.menu__link{
+  color: var(--Subtitle-Darkness-Gray, #969696);
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.36px;
+  text-decoration: none;
+}
+.__logo {
+  position: relative;
+  display: inline-block;
+  font-size: 48px; /* Размер шрифта для текста */
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+  font-weight: 400;
+  color: inherit;
+  margin: 0px 0px 0px 50px;
+  font-family: Tenor Sans;
+  text-decoration: none;
+}
+.badge {
+  color: var(--Subtitle-Darkness-Gray, #969696);/* Цвет текста для цифры, например, черный (#000) */
+  font-size: 18px; /* Размер текста в относительных единицах (зависящий от размера шрифта) */
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+}
+.button_blue {
+  flex: 0 0 252px;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--Subtitle-Darkness-Gray, #969696);
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.36px;
+  text-decoration: none;
+  margin: 13px 0px 0px 0px;
+  max-width: 130px;
+  min-width: 130px;
+  
+}
+.menu__iteam:not(.no-underline),
+.header__button:not(.no-underline){
+  display: inline-block;
+  padding-bottom: 2px;
+  text-decoration-skip-ink: auto;
+  width: auto;
+  text-decoration: underline;
+  text-underline-offset: 0.6em;
+}
+.menu__link#arrow-link::after {
+  content: "^";
+  display: inline-block;
+  font-size: 20px;
+  transform: scaleY(-1);
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  left: 5px;
+  color: black;
+
+}
+.menu__link#arrow-link.active::after{
+  content: "^";
+  transform: scaleY(1);
+}
+.button_blue#arrow-link_button::after {
+  content: "^";
+  display: inline-block;
+  font-size: 20px;
+  transform: scaleY(-1);
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  left: 5px;
+  color: black;
+
+}
+.button_blue#arrow-link_button.active::after {
+  content: "^";
+  transform: scaleY(1);
+}
+
+.filter {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  display: none; /* Изначально скрыт */
+  z-index: -1; /* Значение z-index, чтобы был скрыт */
+  
+}
